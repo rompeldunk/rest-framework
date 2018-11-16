@@ -15,6 +15,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 
 from rest_framework import renderers
+from rest_framework import viewsets
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -51,3 +52,6 @@ class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly,)
+
+
+
