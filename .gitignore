@@ -17,5 +17,4 @@ venv
 [Ss]cripts
 
 .venv
-db.sqlite3
 migrations
